@@ -1,0 +1,249 @@
+/* ====================================
+   CADASTRO - ESTANTE INFINITA
+   Prefixo exclusivo:
+   ec-create-account-
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ec-create-account-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #03254d 0%,
+        #3d89ae 100%
+    );
+}
+
+.ec-create-account-container{
+
+    width:100%;
+    max-width:450px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.ec-create-account-back-btn{
+
+    position:fixed;
+
+    top:25px;
+    left:20px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:1.5rem;
+
+    color:white;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter: blur(5px);
+}
+
+.ec-create-account-avatar{
+
+    width:150px;
+    height:150px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#e8e8e8;
+
+    border:4px solid #0c4f7a;
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.2);
+}
+
+.ec-create-account-avatar svg{
+
+    width:70px;
+    height:70px;
+
+    color:#242424;
+}
+
+.ec-create-account-form{
+
+    width:100%;
+}
+
+.ec-create-account-field{
+
+    margin-bottom:22px;
+}
+
+.ec-create-account-field label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:white;
+
+    font-size:14px;
+}
+
+.ec-create-account-field input{
+
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    padding:18px 20px;
+
+    border-radius:40px;
+
+    color:white;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,.15);
+}
+
+.ec-create-account-field input:focus{
+
+    outline:2px solid rgba(255,255,255,.5);
+}
+
+.ec-create-account-checkbox-group{
+
+    margin-bottom:20px;
+}
+
+.ec-create-account-checkbox{
+
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+
+    color:white;
+
+    font-size:14px;
+    line-height:1.4;
+}
+
+.ec-create-account-checkbox input{
+
+    margin-top:3px;
+
+    width:18px;
+    height:18px;
+
+    cursor:pointer;
+}
+
+.ec-create-account-submit{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1.4rem;
+    font-weight:500;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+    0 5px 12px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.ec-create-account-submit:hover{
+
+    transform:translateY(-2px);
+
+    background:
+    rgba(255,255,255,.25);
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media (max-width:768px){
+
+    .ec-create-account-container{
+        max-width:380px;
+    }
+
+    .ec-create-account-avatar{
+        width:130px;
+        height:130px;
+    }
+}
+
+@media (max-width:480px){
+
+    .ec-create-account-page{
+        padding:20px;
+    }
+
+    .ec-create-account-avatar{
+
+        width:120px;
+        height:120px;
+    }
+
+    .ec-create-account-submit{
+
+        font-size:1.2rem;
+    }
+
+    .ec-create-account-checkbox{
+
+        font-size:13px;
+    }
+}
