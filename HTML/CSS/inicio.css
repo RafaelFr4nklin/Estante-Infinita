@@ -1,0 +1,308 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #2C7DA0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #012A4A;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-circle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.logo-text small {
+    font-size: 0.36rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-top: 2px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.icon-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== BARRA DE BUSCA (ainda no bloco escuro do topo) ===== */
+.search-wrapper {
+    background-color: #012A4A;
+    padding: 14px 20px 18px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+    padding: 10px 18px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* linha abaixo da busca */
+.linha-busca {
+    height: 3px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.22);
+    margin: 14px 0 0;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 20px 0 30px;
+    background-color: #2C7DA0;
+}
+
+/* ===== SEÇÃO DE CATEGORIA ===== */
+.categoria {
+    margin-bottom: 28px;
+}
+
+/* Título pill centralizado */
+.categoria-titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.categoria-titulo span {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    padding: 9px 52px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Scroll horizontal de cards */
+.cards-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 20px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.25) transparent;
+}
+
+.cards-scroll::-webkit-scrollbar { height: 4px; }
+.cards-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+/* Linha separadora abaixo do scroll */
+.linha-secao {
+    height: 3px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.22);
+    margin: 12px 20px 0;
+}
+
+/* ===== CARD INDIVIDUAL ===== */
+.card-item {
+    flex: 0 0 148px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: rgba(1, 42, 74, 0.45);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    border-radius: 14px;
+    padding: 10px 8px 12px;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.2s;
+}
+
+.card-item:hover {
+    transform: translateY(-4px);
+    background: rgba(1,42,74,0.6);
+}
+
+/* Imagem do card — proporção de carta TCG */
+.card-img {
+    width: 118px;
+    height: 158px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    overflow: hidden;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    flex-shrink: 0;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.card-nome {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.25;
+    margin-top: 3px;
+    color: #fff;
+}
+
+.estrelas {
+    font-size: 0.56rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 2px;
+}
+
+.card-preco {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #012A4A;
+    padding: 20px;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Logo menor no footer */
+.footer-logo .logo-circle {
+    width: 68px;
+    height: 68px;
+}
+
+/* Links de navegação */
+.footer-nav ul {
+    list-style: disc;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+}
+
+.footer-nav a {
+    color: #7ec8e3;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+/* Bloco de redes sociais — canto direito com fundo azul médio arredondado */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #2C7DA0;
+    border-radius: 20px;
+    padding: 16px 14px;
+    margin-left: auto;
+}
+
+.social-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.social-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.08);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+    .card-item { flex: 0 0 128px; }
+    .card-img { width: 104px; height: 138px; }
+    .footer-social { flex-direction: row; margin-left: 0; }
+    .categoria-titulo span { padding: 9px 32px; }
+}
