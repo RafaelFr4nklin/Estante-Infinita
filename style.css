@@ -1,0 +1,93 @@
+
+
+/*=====| ESTILO BASE DO BODY |=====*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+body {
+    background-color: #2C7DA0;
+    
+}
+header {
+    background-color: #012A4A;
+    
+    padding: 20px 0;
+}
+footer {
+    background-color: #012A4A;
+    padding: 20px 0;
+    position: relative;
+    
+}
+main{
+    
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(to bottom, #012A4A, #2C7DA0, #012A4A);
+}
+/*===================================*/
+
+/*=====| ESTILO DAS INFORMAÇÕES |=====*/
+
+#logo{
+    width: 10%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.linha{
+    border: none;
+  height: 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 12px;
+}
+section{
+    font-family: molengo, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
+    border-radius: 40%;
+    background-color: #012A4A;
+    
+}
+.efeito-vidro{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    
+    border-radius: 5px;
+}
+
+ #formRedesSociais, #enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 20%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
+    border-radius: 40%;
+   
+    
+}
+@media (max-width: 768px) {
+
+}
