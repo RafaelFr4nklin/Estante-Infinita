@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Estante Infinita</title>
+
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <main class="ei-checkout-page">
+
+        <header class="ei-checkout-header">
+
+            <button class="ei-checkout-back-btn" onclick="history.back()">
+                ←
+            </button>
+
+            <img
+                src="assets/logo.png"
+                alt="Logo Estante Infinita"
+                class="ei-checkout-logo">
+
+            <h1 class="ei-checkout-title">
+                Voltar para o Carrinho
+            </h1>
+
+        </header>
+
+        <div class="ei-checkout-location">
+
+            <span class="ei-checkout-location-icon">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M12 22s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                    <path d="M12 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                </svg>
+
+            </span>
+
+            <span>Rua dos Palmares, 789</span>
+
+        </div>
+
+        <hr class="ei-checkout-divider">
+
+        <section class="ei-checkout-payment-list">
+
+            <button class="ei-checkout-payment-option" data-payment="PIX">
+                <span class="ei-checkout-payment-name">PIX</span>
+                <span class="ei-checkout-arrow">→</span>
+            </button>
+
+            <button class="ei-checkout-payment-option" data-payment="Cartão de Crédito">
+                <span class="ei-checkout-payment-name">Cartão de Crédito</span>
+                <span class="ei-checkout-arrow">→</span>
+            </button>
+
+            <button class="ei-checkout-payment-option" data-payment="Cartão de Débito">
+                <span class="ei-checkout-payment-name">Cartão de Débito</span>
+                <span class="ei-checkout-arrow">→</span>
+            </button>
+
+            <button class="ei-checkout-payment-option" data-payment="Boleto">
+                <span class="ei-checkout-payment-name">Boleto</span>
+                <span class="ei-checkout-arrow">→</span>
+            </button>
+
+            <button class="ei-checkout-payment-option" data-payment="Dinheiro">
+                <span class="ei-checkout-payment-name">Dinheiro</span>
+                <span class="ei-checkout-arrow">→</span>
+            </button>
+
+        </section>
+
+        <div id="ei-checkout-selected" class="ei-checkout-selected">
+            Nenhuma forma de pagamento selecionada
+        </div>
+
+        <button id="ei-checkout-finish-btn" class="ei-checkout-finish-btn">
+            Finalizar Pedido
+        </button>
+
+        <div class="ei-checkout-address-bottom">
+
+            <span class="ei-checkout-location-icon">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M12 22s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                    <path d="M12 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                </svg>
+
+            </span>
+
+            <span>Rua dos Palmares, 789</span>
+
+        </div>
+
+        <div id="ei-checkout-success" class="ei-checkout-success">
+            Pedido realizado com sucesso!
+        </div>
+
+    </main>
+
+    <script>
+
+        let pagamentoSelecionado = "";
+
+        const opcoes = document.querySelectorAll(".ei-checkout-payment-option");
+        const textoSelecionado = document.getElementById("ei-checkout-selected");
+        const botaoFinalizar = document.getElementById("ei-checkout-finish-btn");
+        const sucesso = document.getElementById("ei-checkout-success");
+
+        opcoes.forEach(opcao => {
+
+            opcao.addEventListener("click", () => {
+
+                opcoes.forEach(item => item.classList.remove("ei-checkout-active"));
+
+                opcao.classList.add("ei-checkout-active");
+
+                pagamentoSelecionado = opcao.dataset.payment;
+
+                textoSelecionado.innerHTML =
+                    "Forma de pagamento: <strong>" + pagamentoSelecionado + "</strong>";
+
+            });
+
+        });
+
+        botaoFinalizar.addEventListener("click", () => {
+
+            if (!pagamentoSelecionado) {
+                alert("Selecione uma forma de pagamento.");
+                return;
+            }
+
+            sucesso.classList.add("show");
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2500);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
