@@ -1,23 +1,29 @@
 
-
+:root{
+    --cor-borda-do-site: #012A4A;
+    --cor-fundo: #2C7DA0;
+    --cor-texto: #fff;
+    --cor-borda-do-vidro: rgba(255, 255, 255, 0.18);
+    --cor-vidro: rgba(31, 38, 135, 0.37);
+}
 /*=====| ESTILO BASE DO BODY |=====*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+    color:  var(--cor-texto);
 }
 body {
-    background-color: #2C7DA0;
+    background-color: var(--cor-fundo);
     
 }
 header {
-    background-color: #012A4A;
+    background-color: var(--cor-borda-do-site);
     
     padding: 20px 0;
 }
 footer {
-    background-color: #012A4A;
+    background-color: var(--cor-borda-do-site);
     padding: 20px 0;
     position: relative;
     
@@ -26,7 +32,9 @@ main{
     
     width: 100%;
     place-items: center;
-    background: linear-gradient(to bottom, #012A4A, #2C7DA0, #012A4A);
+    background: linear-gradient
+    (to bottom, var(--cor-borda-do-site), 
+    var(--cor-fundo), var(--cor-borda-do-site));
 }
 /*===================================*/
 
@@ -42,7 +50,7 @@ main{
     border: none;
   height: 4px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--cor-borda-do-vidro);
   margin-top: 12px;
 }
 section{
@@ -54,16 +62,16 @@ section{
     margin: 20px;
     width: 400px;
     border-radius: 40%;
-    background-color: #012A4A;
+    background-color: var(--cor-borda-do-site);
     
 }
 .efeito-vidro{
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: var(--cor-borda-do-vidro);
+    box-shadow: 0 8px 32px 0 var(--cor-vidro);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--cor-borda-do-vidro);
 }
 input{
     width: 100%;

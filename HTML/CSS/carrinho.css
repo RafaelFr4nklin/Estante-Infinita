@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ec-create-account-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(
+        180deg,
+        #03254d 0%,
+        #3d89ae 100%
+    );
+}
+
+.ec-create-account-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ec-create-account-back-btn {
+    position: fixed;
+    top: 25px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.ec-create-account-back-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ec-create-account-avatar {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8e8e8;
+    border: 4px solid #0c4f7a;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ec-create-account-avatar svg {
+    width: 70px;
+    height: 70px;
+    color: #242424;
+}
+
+.ec-create-account-form {
+    width: 100%;
+}
+
+.ec-create-account-field {
+    margin-bottom: 22px;
+}
+
+.ec-create-account-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ec-create-account-field input {
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ec-create-account-field input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ec-create-account-field input:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.ec-create-account-checkbox-group {
+    margin-bottom: 18px;
+}
+
+.ec-create-account-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ec-create-account-checkbox input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.ec-create-account-submit {
+    width: 100%;
+    margin-top: 25px;
+    padding: 18px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.ec-create-account-submit:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ec-create-account-submit:active {
+    transform: translateY(0);
+}
+
+.ec-success-message {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.ec-success-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+
+    .ec-create-account-container {
+        max-width: 380px;
+    }
+
+    .ec-create-account-avatar {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .ec-create-account-page {
+        padding: 20px;
+    }
+
+    .ec-create-account-container {
+        max-width: 100%;
+    }
+
+    .ec-create-account-avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 25px;
+    }
+
+    .ec-create-account-avatar svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ec-create-account-field input {
+        padding: 16px;
+    }
+
+    .ec-create-account-submit {
+        font-size: 1.1rem;
+        padding: 16px;
+    }
+
+    .ec-create-account-checkbox {
+        font-size: 13px;
+    }
+
+    .ec-success-message {
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+}
