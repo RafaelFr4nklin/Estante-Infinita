@@ -228,38 +228,76 @@ body{
     font-weight:700;
 }
 
-/* ===== SUCCESS ===== */
+/* ❌ REMOVIDO VISUAL DO ANTIGO SUCCESS (não será mais usado) */
 .ei-checkout-success{
+    display:none;
+}
+
+/* ===== OVERLAY DE SUCESSO (NOVO SISTEMA) ===== */
+.ei-success-overlay{
 
     position:fixed;
+    top:0;
+    left:0;
 
-    top:50%;
-    left:50%;
+    width:100%;
+    height:100%;
 
-    transform:translate(-50%,-50%);
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        180deg,
+        #03254d 0%,
+        #3d89ae 100%
+    );
+
+    z-index:999;
+}
+
+.ei-success-box{
 
     width:85%;
-    max-width:300px;
+    max-width:320px;
+
+    background:#ffffff;
 
     padding:20px;
 
     border-radius:10px;
 
-    background:#28a745;
-
-    color:#fff;
-
     text-align:center;
 
-    opacity:0;
-    visibility:hidden;
-
-    transition:.3s;
+    box-shadow:0 6px 15px rgba(0,0,0,.3);
 }
 
-.ei-checkout-success.show{
-    opacity:1;
-    visibility:visible;
+.ei-success-box h1{
+    font-size:1.2rem;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.ei-success-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.ei-success-box button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:6px;
+
+    background:#9dd1ee;
+
+    font-weight:700;
+
+    cursor:pointer;
 }
 
 /* ===== TABLET ===== */
