@@ -1,0 +1,283 @@
+/* ===== RESET ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Molengo", sans-serif;
+}
+ 
+body{
+    background: linear-gradient(to bottom, #012A4A, #2C7DA0, #012A4A);
+    color: white;
+    min-height: 100vh;
+}
+ 
+/* ===== HEADER ===== */
+header{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+#logo{
+    width: 90px;
+    height: auto;
+}
+ 
+.header-icons{
+    display: flex;
+    gap: 20px;
+}
+ 
+.header-icons a{
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
+ 
+/* ===== BARRA DE PESQUISA ===== */
+ 
+.pesquisa-tudo{
+    width: 95%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, #012A4A, #2C7DA0);
+}
+ 
+.pesquisar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+ 
+.pesquisar input{
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+   
+ 
+ 
+    border: none;
+    outline: none;
+ 
+    border-radius: 25px;
+ 
+    background: none;
+    color: white;
+}
+ 
+.pesquisar input::placeholder{
+    color: white;
+}
+ 
+.pesquisar button{
+    height: 40px;
+    padding: 0 20px;
+ 
+    border: none;
+    outline: none;
+ 
+    border-radius: 25px;
+   background: linear-gradient(to bottom, #012A4A, #2C7DA0);
+ 
+   
+    color: white;
+ 
+    cursor: pointer;
+    transition: 0.3s;
+}
+ 
+.pesquisar button:hover{
+    background: none;
+}
+ 
+/* ===== LINHAS ===== */
+ 
+.linha{
+    width: 80%;
+    height: 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    margin: 25px auto;
+    border: none;
+}
+ 
+/* ===== TÍTULOS ===== */
+ 
+.titulo-secao{
+    width: 250px;
+    margin: auto;
+    padding: 12px;
+ 
+    text-align: center;
+ 
+    background: #1f5f89;
+    border-radius: 20px;
+ 
+    font-size: 1.8rem;
+}
+ 
+/* ===== PRODUTOS ===== */
+ 
+.produtos{
+    width: 95%;
+    margin: 30px auto;
+ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+ 
+/* ===== CARDS ===== */
+ 
+.card{
+    width: 160px;
+ 
+    background: rgba(255,255,255,0.15);
+ 
+    border: 2px solid #f4a261;
+    border-radius: 20px;
+ 
+    overflow: hidden;
+ 
+    transition: .3s;
+}
+ 
+.card:hover{
+    transform: translateY(-8px);
+}
+ 
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+ 
+.card-info{
+    padding: 10px;
+}
+ 
+.card h4{
+    font-size: .9rem;
+    margin-bottom: 5px;
+}
+ 
+.estrelas{
+    color: gold;
+    font-size: .8rem;
+}
+ 
+.preco{
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+ 
+/* ===== FOOTER ===== */
+ 
+footer{
+    margin-top: 40px;
+    padding: 30px;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.footer-menu ul{
+    list-style: none;
+}
+ 
+.footer-menu li{
+    margin: 8px 0;
+}
+ 
+.footer-menu a{
+    color: white;
+    text-decoration: none;
+}
+ 
+.footer-menu a:hover{
+    color: #89C2D9;
+}
+ 
+.redes{
+    display: flex;
+    gap: 20px;
+}
+ 
+.redes a{
+    width: 70px;
+    height: 70px;
+ 
+    background: white;
+    color: #012A4A;
+ 
+    border-radius: 50%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    text-decoration: none;
+    font-size: 30px;
+}
+ 
+/* ===== EFEITO VIDRO ===== */
+ 
+.efeito-vidro{
+    background: rgba(255,255,255,0.15);
+ 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+ 
+    border: 1px solid rgba(255,255,255,0.2);
+}
+ 
+/* ===== TESTE ===== */
+ 
+.bulbasaur{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+ 
+/* ===== RESPONSIVO ===== */
+ 
+@media(max-width:768px){
+ 
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+    .pesquisar{
+        flex-direction: column;
+    }
+ 
+    .pesquisar input{
+        width: 100%;
+    }
+ 
+    .produtos{
+        gap: 15px;
+    }
+ 
+    .card{
+        width: 140px;
+    }
+ 
+    footer{
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+}
+ 
