@@ -23,19 +23,30 @@ header {
     padding: 20px 0;
 }
 footer {
-    background-color: var(--cor-borda-do-site);
-    padding: 20px 0;
-    position: relative;
-    
-}
-main{
     
     width: 100%;
-    place-items: center;
-    background: linear-gradient
-    (to bottom, var(--cor-borda-do-site), 
-    var(--cor-fundo), var(--cor-borda-do-site));
+    min-height: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--cor-borda-do-site);
+    padding: 20px 35;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
+main {
+    background: linear-gradient(to bottom, var(--cor-borda-do-site), var(--cor-fundo), var(--cor-borda-do-site));
+    height: 78.5vh;
+    min-height: 78.5vh;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+
+    width: 100%;
+    place-items: center;
+    }
 /*===================================*/
 
 /*=====| ESTILO DAS INFORMAÇÕES |=====*/
