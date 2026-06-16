@@ -8,7 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.ec-create-account-page {
+.criacao-conta-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
     );
 }
 
-.ec-create-account-container {
+.criacao-container {
     width: 100%;
     max-width: 450px;
     display: flex;
@@ -29,7 +29,7 @@ body {
     align-items: center;
 }
 
-.ec-create-account-back-btn {
+.criacao-conta-back-btn {
     position: fixed;
     top: 25px;
     left: 20px;
@@ -45,11 +45,11 @@ body {
     transition: 0.3s;
 }
 
-.ec-create-account-back-btn:hover {
+.criacao-conta-back-btn:hover {
     background: rgba(255, 255, 255, 0.25);
 }
 
-.ec-create-account-avatar {
+.avatar {
     width: 150px;
     height: 150px;
     display: flex;
@@ -62,21 +62,21 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.ec-create-account-avatar svg {
+.avatar svg {
     width: 70px;
     height: 70px;
     color: #242424;
 }
 
-.ec-create-account-form {
+.criacao-conta-form {
     width: 100%;
 }
 
-.ec-create-account-field {
+.estilo-vidro {
     margin-bottom: 22px;
 }
 
-.ec-create-account-field label {
+.estilo-vidro label {
     display: block;
     margin-bottom: 8px;
     color: #ffffff;
@@ -84,7 +84,7 @@ body {
     font-weight: 500;
 }
 
-.ec-create-account-field input {
+.estilo-vidro input {
     width: 100%;
     padding: 18px 20px;
     border: none;
@@ -97,19 +97,19 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.ec-create-account-field input::placeholder {
+.estilo-vidro input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.ec-create-account-field input:focus {
+.estilo-vidro input:focus {
     outline: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-.ec-create-account-checkbox-group {
+.grupo-criar-conta {
     margin-bottom: 18px;
 }
 
-.ec-create-account-checkbox {
+.criar-conta {
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -118,7 +118,7 @@ body {
     line-height: 1.5;
 }
 
-.ec-create-account-checkbox input {
+.criar-conta input {
     width: 18px;
     height: 18px;
     margin-top: 2px;
@@ -126,7 +126,7 @@ body {
     flex-shrink: 0;
 }
 
-.ec-create-account-submit {
+.criacao-conta-submit {
     width: 100%;
     margin-top: 25px;
     padding: 18px;
@@ -142,16 +142,16 @@ body {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
 }
 
-.ec-create-account-submit:hover {
+.criacao-conta-submit:hover {
     transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.25);
 }
 
-.ec-create-account-submit:active {
+.criacao-conta-submit:active {
     transform: translateY(0);
 }
 
-.ec-success-message {
+.msg-sucesso {
     position: fixed;
     top: 30px;
     left: 50%;
@@ -169,18 +169,18 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
-.ec-success-message.show {
+.msg-sucesso.show {
     opacity: 1;
     visibility: visible;
 }
 
 @media (max-width: 768px) {
 
-    .ec-create-account-container {
+    .criacao-container {
         max-width: 380px;
     }
 
-    .ec-create-account-avatar {
+    .avatar {
         width: 130px;
         height: 130px;
     }
@@ -188,39 +188,34 @@ body {
 
 @media (max-width: 480px) {
 
-    .ec-create-account-page {
+    .criacao-conta-page {
         padding: 20px;
     }
 
-    .ec-create-account-container {
+    .criacao-container {
         max-width: 100%;
     }
 
-    .ec-create-account-avatar {
+    .avatar {
         width: 120px;
         height: 120px;
         margin-bottom: 25px;
     }
 
-    .ec-create-account-avatar svg {
-        width: 60px;
-        height: 60px;
-    }
-
-    .ec-create-account-field input {
+    .estilo-vidro input {
         padding: 16px;
     }
 
-    .ec-create-account-submit {
+    .criacao-conta-submit {
         font-size: 1.1rem;
         padding: 16px;
     }
 
-    .ec-create-account-checkbox {
+    .criar-conta {
         font-size: 13px;
     }
 
-    .ec-success-message {
+    .msg-sucesso {
         width: calc(100% - 40px);
         text-align: center;
     }

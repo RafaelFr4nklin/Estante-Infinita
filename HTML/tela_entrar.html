@@ -9,7 +9,7 @@
 <body>
     <header>
         <!--======|CABEÇALHO DO SITE|======-->
-        <button name="voltar"> Voltar</button>
+        <button name="voltar"> <img id="seta" src="img/seta.png" alt=""></button>
         <br><br>
         <img id="logo" src="img/logo.png" alt="">
 
@@ -34,14 +34,14 @@
         <h3> ou </h3>
 
         <form id="formRedesSociais"> 
-            <button class="efeito-vidro">Continuar pelo google</button>
-            <button class="efeito-vidro">Continuar pelo facebook</button>
+            <button class="efeito-vidro" onclick="history.back()">Continuar pelo google</button>
+            <button class="efeito-vidro" onclick="history.back()">Continuar pelo facebook</button>
         </form>
     </main>
     <footer>
         <br>
         <text>Já é cadastrado?</text>
-        <button class="texto-botao">Crie</button>
+        <button class="texto-botao" onclick="history.back()">Crie</button>
     </footer>
 </body>
 </html>

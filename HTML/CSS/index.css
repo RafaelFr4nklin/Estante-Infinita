@@ -215,44 +215,63 @@ header{
  
 footer{
     margin-top: 40px;
-    padding: 30px;
- 
+    padding: 20px 40px;
+    border-radius: 0 0 20px 20px;
+    gap: 40px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
  
+.footer-menu{
+    flex: 2;
+    margin: 0 50px;
+}
+
 .footer-menu ul{
+
+    width: 100%;
     list-style: none;
+    padding: 0;
 }
  
 .footer-menu li{
-    margin: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding: 4px 0;
+    width: 100%;
 }
  
 .footer-menu a{
     color: white;
     text-decoration: none;
+    font-weight: bold;
+
+    display: block;
+    font-size: 18px;
 }
  
 .footer-menu a:hover{
     color: #89C2D9;
 }
- 
+
 .redes{
+    background: rgba(255,255,255,0.1);
     display: flex;
     gap: 20px;
+    padding: 20px 25px;
+    border-radius: 20px;
 }
  
 .redes a{
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
  
     background: white;
     color: #012A4A;
  
-    border-radius: 50%;
+    border-radius: 70%;
  
     display: flex;
     justify-content: center;
