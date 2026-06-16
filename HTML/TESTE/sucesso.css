@@ -1,0 +1,326 @@
+/* ========================================
+   VARIÁVEIS GLOBAIS
+   Define as cores reutilizáveis do projeto.
+   Alterar aqui reflete em todo o CSS.
+======================================== */
+
+:root {
+    --cor-borda-do-site:  #012A4A;
+    --cor-fundo:          #2C7DA0;
+    --cor-texto:          #fff;
+    --cor-borda-do-vidro: rgba(255, 255, 255, 0.18);
+    --cor-vidro:          rgba(31, 38, 135, 0.37);
+}
+
+/* ========================================
+   RESET UNIVERSAL
+   Remove margens, paddings e garante que
+   largura/altura incluam borda e padding
+   (box-sizing: border-box).
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Base para unidades "rem" */
+}
+
+/* ========================================
+   BODY
+   Ocupa toda a altura da tela (100vh),
+   centraliza o card horizontalmente e
+   verticalmente tanto no mobile quanto PC.
+   O fundo azul escuro preenche o espaço
+   fora do card em telas maiores.
+======================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--cor-borda-do-site);
+}
+
+/* ========================================
+   CONTAINER PRINCIPAL  (.mobile-screen)
+   O "cartão" central que simula a tela
+   do app. Tem largura fixa de 430px no
+   PC e ocupa 100% no mobile.
+   O gradiente radial vai do azul claro
+   (topo) ao azul escuro (base).
+======================================== */
+
+.mobile-screen {
+    width: 100%;
+    max-width: 430px;           /* Largura máxima — mantém formato app no PC */
+
+    padding: 22px;
+
+    /* CORREÇÃO: radial-gradient não aceita "to bottom".
+       Usamos "ellipse at top" para o efeito do topo claro → base escura. */
+    background: radial-gradient(
+        ellipse at top,
+        #5bb7de 0%,
+        #2689ba 38%,
+        #045d8f 70%,
+        #003b64 100%
+    );
+
+    border-radius: 12px;        /* Cantos arredondados no PC */
+    overflow: hidden;           /* Impede filhos "vazarem" fora do border-radius */
+
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5); /* Sombra para destacar no PC */
+}
+
+/* ========================================
+   HEADER — LINHA DO TOPO
+   Flex row: logo à esquerda, botão de
+   voltar + texto centralizados.
+======================================== */
+
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Logo circular */
+.logo {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;             /* Não encolhe se faltar espaço */
+}
+
+/* Agrupa botão ← e o texto de voltar */
+.back-wrapper {
+    flex: 1;                    /* Ocupa o espaço restante da linha */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+/* Botão de voltar (seta ←) */
+.back-btn {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #6faecc;
+    color: #fff;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.back-btn:hover {
+    background: #4e96b8;        /* Feedback visual ao passar o mouse */
+}
+
+/* Texto ao lado do botão de voltar */
+.back-text {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    max-width: 200px;
+}
+
+/* Endereço pequeno abaixo da linha do topo */
+.address-top {
+    margin-top: 16px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* Linha separadora translúcida */
+.divider {
+    margin-top: 8px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+}
+
+/* ========================================
+   CARD DE SUCESSO
+   Caixa cinza com borda que exibe o
+   título "Compra Realizada com Sucesso!".
+======================================== */
+
+.success-card {
+    margin-top: 26px;
+
+    width: 100%;
+    min-height: 130px;
+
+    background: #dcdcdc;
+    border: 3px solid #8d8d8d;
+
+    padding: 20px;
+
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.10),
+        4px 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.success-card h1 {
+    color: #111;
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+/* ========================================
+   ÁREA DE CONFETES  (.success-image)
+   Contém o canvas onde os confetes são
+   desenhados via JavaScript.
+   A altura fixa reserva espaço visual.
+======================================== */
+
+.success-image {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 28px;
+
+    height: 180px;              /* Altura reservada para a animação */
+    position: relative;
+}
+
+/* Canvas dos confetes ocupa toda a área */
+#confetti-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================================
+   BOTÃO "VOLTAR À TELA PRINCIPAL"
+   Largura de 82%, dividido entre texto
+   e uma caixinha com a seta →.
+======================================== */
+
+.action-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.home-button {
+    width: 82%;
+    height: 42px;
+
+    background: #dcdcdc;
+    border: 2px solid #8d8d8d;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background: #c8c8c8;        /* Escurece levemente ao passar o mouse */
+}
+
+/* Texto do botão */
+.home-button span:first-child {
+    padding-left: 18px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Caixinha azul com a seta → */
+.arrow-box {
+    width: 42px;
+    height: 100%;
+
+    background: #9fd8eb;
+    border-left: 1px solid #7db9cb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    color: #111;
+}
+
+/* ========================================
+   RODAPÉ
+   Exibe ícone de pin + endereço.
+======================================== */
+
+footer {
+    margin-top: 35px;
+}
+
+/* Linha com ícone e texto lado a lado */
+.location-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Container do ícone SVG de localização */
+.location-pin {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+.location-pin svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Texto do endereço no rodapé */
+.location-wrapper span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* ========================================
+   RESPONSIVIDADE — MOBILE (≤ 430px)
+   Remove o padding do body para o card
+   ocupar a tela toda sem margens laterais.
+======================================== */
+
+@media (max-width: 430px) {
+
+    body {
+        padding: 0;
+        align-items: flex-start; /* Card começa do topo no mobile */
+    }
+
+    .mobile-screen {
+        border-radius: 0;       /* Sem cantos arredondados no mobile */
+        box-shadow: none;
+        min-height: 100vh;      /* Ocupa a tela inteira verticalmente */
+    }
+}
