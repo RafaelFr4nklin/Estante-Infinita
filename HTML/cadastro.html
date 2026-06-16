@@ -3,36 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nome="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta - Estante Infinita</title>
     <link rel="stylesheet" href="CSS/cadastro.css">
 </head>
 
 <body>
 
-    <main class="create-account-page">
+    <main class="criacao-conta-page">
 
-        <button type="button" class="create-account-back-btn" onclick="history.back()">
+        <button type="button" class="criacao-conta-back-btn" onclick="history.back()">
             <img id="seta" src="img/seta.png" alt="">
         </button>
 
-        <section class="create-account-container">
+        <section class="criacao-container">
 
-            <div class="create-account-avatar">
+            <div class="avatar">
                 <img id="person" src="img/person.png" alt="">
             </div>
 
             <form
-                id="create-account-form"
-                class="create-account-form">
+                id="criacao-conta"
+                class="criacao-conta">
 
                 <div class="estilo-vidro">
-                    <label for="fullname">Nome Completo</label>
+                    <label for="nome-completo">Nome Completo</label>
                     <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        autocomplete="name"
+                        type="texto"
+                        id="nome-completo"
+                        nome="nome-completo"
+                        autocomplete="nome"
                         required>
                 </div>
 
@@ -41,41 +41,41 @@
                     <input
                         type="email"
                         id="email"
-                        name="email"
+                        nome="email"
                         autocomplete="email"
                         required>
                 </div>
 
                 <div class="estilo-vidro">
-                    <label for="password">Senha</label>
+                    <label for="senha">Senha</label>
                     <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        autocomplete="new-password"
+                        type="senha"
+                        id="senha"
+                        nome="senha"
+                        autocomplete="nova-senha"
                         required>
                 </div>
 
                 <div class="estilo-vidro">
-                    <label for="city">Cidade</label>
+                    <label for="cidade">Cidade</label>
                     <input
-                        type="text"
-                        id="city"
-                        name="city"
+                        type="texto"
+                        id="cidade"
+                        nome="cidade"
                         autocomplete="address-level2"
                         required>
                 </div>
 
-                <div class="create-account-checkbox-group">
-                    <label class="create-account-checkbox">
+                <div class="grupo-criar-conta">
+                    <label class="criar-conta">
                         <input
                             type="checkbox"
-                            name="newsletter">
+                            nome="newsletter">
                             Aceito receber as novidades do site
                 </div>
 
-                <div class="create-account-checkbox-group">
-                    <label class="create-account-checkbox">
+                <div class="grupo-criar-conta">
+                    <label class="criar-conta">
                         <input
                             type="checkbox"
                             id="terms"
@@ -86,15 +86,15 @@
 
                 <button
                     type="submit"
-                    class="create-account-submit">
+                    class="criacao-conta-submit">
                     Criar Conta
                 </button>
 
             </form>
 
             <div
-                id="success-message"
-                class="success-message">
+                id="msg-sucesso"
+                class="msg-sucesso">
                 Conta criada com sucesso! Redirecionando para o login...
             </div>
 
@@ -106,17 +106,17 @@
 
         document.addEventListener("DOMContentLoaded", () => {
 
-            const form = document.getElementById("create-account-form");
-            const successMessage = document.getElementById("success-message");
+            const form = document.getElementById("criacao-conta");
+            const successMessage = document.getElementById("msg-sucesso");
 
             form.addEventListener("submit", (event) => {
 
                 event.preventDefault();
 
-                const nome = document.getElementById("fullname").value.trim();
+                const nome = document.getElementById("nome-completo").value.trim();
                 const email = document.getElementById("email").value.trim();
-                const senha = document.getElementById("password").value.trim();
-                const cidade = document.getElementById("city").value.trim();
+                const senha = document.getElementById("senha").value.trim();
+                const cidade = document.getElementById("cidade").value.trim();
 
                 if (!nome || !email || !senha || !cidade) {
                     alert("Preencha todos os campos.");
