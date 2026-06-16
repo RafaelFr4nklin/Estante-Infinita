@@ -5,113 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta - Estante Infinita</title>
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="CSS/cadastro.css">
 </head>
 
 <body>
 
-    <main class="ec-create-account-page">
+    <main class="create-account-page">
 
-        <button
-            type="button"
-            class="ec-create-account-back-btn"
-            onclick="history.back()"
-            aria-label="Voltar">
-            ←
+        <button type="button" class="create-account-back-btn" onclick="history.back()">
+            <img id="seta" src="img/seta.png" alt="">
         </button>
 
-        <section class="ec-create-account-container">
+        <section class="create-account-container">
 
-            <div class="ec-create-account-avatar">
-
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor">
-
-                    <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/>
-                </svg>
-
+            <div class="create-account-avatar">
+                <img id="person" src="img/person.png" alt="">
             </div>
 
             <form
-                id="ec-create-account-form"
-                class="ec-create-account-form">
+                id="create-account-form"
+                class="create-account-form">
 
-                <div class="ec-create-account-field">
-                    <label for="ec-fullname">Nome Completo</label>
+                <div class="estilo-vidro">
+                    <label for="fullname">Nome Completo</label>
                     <input
                         type="text"
-                        id="ec-fullname"
+                        id="fullname"
                         name="fullname"
                         autocomplete="name"
                         required>
                 </div>
 
-                <div class="ec-create-account-field">
-                    <label for="ec-email">Email</label>
+                <div class="estilo-vidro">
+                    <label for="email">Email</label>
                     <input
                         type="email"
-                        id="ec-email"
+                        id="email"
                         name="email"
                         autocomplete="email"
                         required>
                 </div>
 
-                <div class="ec-create-account-field">
-                    <label for="ec-password">Senha</label>
+                <div class="estilo-vidro">
+                    <label for="password">Senha</label>
                     <input
                         type="password"
-                        id="ec-password"
+                        id="password"
                         name="password"
                         autocomplete="new-password"
                         required>
                 </div>
 
-                <div class="ec-create-account-field">
-                    <label for="ec-city">Cidade</label>
+                <div class="estilo-vidro">
+                    <label for="city">Cidade</label>
                     <input
                         type="text"
-                        id="ec-city"
+                        id="city"
                         name="city"
                         autocomplete="address-level2"
                         required>
                 </div>
 
-                <div class="ec-create-account-checkbox-group">
-                    <label class="ec-create-account-checkbox">
+                <div class="create-account-checkbox-group">
+                    <label class="create-account-checkbox">
                         <input
                             type="checkbox"
                             name="newsletter">
-                        <span>
                             Aceito receber as novidades do site
-                        </span>
-                    </label>
                 </div>
 
-                <div class="ec-create-account-checkbox-group">
-                    <label class="ec-create-account-checkbox">
+                <div class="create-account-checkbox-group">
+                    <label class="create-account-checkbox">
                         <input
                             type="checkbox"
-                            id="ec-terms"
+                            id="terms"
                             required>
-                        <span>
                             Estou de acordo com os termos de serviço e a política de privacidade da Estante Infinita
-                        </span>
                     </label>
                 </div>
 
                 <button
                     type="submit"
-                    class="ec-create-account-submit">
+                    class="create-account-submit">
                     Criar Conta
                 </button>
 
             </form>
 
             <div
-                id="ec-success-message"
-                class="ec-success-message">
+                id="success-message"
+                class="success-message">
                 Conta criada com sucesso! Redirecionando para o login...
             </div>
 
@@ -123,17 +106,17 @@
 
         document.addEventListener("DOMContentLoaded", () => {
 
-            const form = document.getElementById("ec-create-account-form");
-            const successMessage = document.getElementById("ec-success-message");
+            const form = document.getElementById("create-account-form");
+            const successMessage = document.getElementById("success-message");
 
             form.addEventListener("submit", (event) => {
 
                 event.preventDefault();
 
-                const nome = document.getElementById("ec-fullname").value.trim();
-                const email = document.getElementById("ec-email").value.trim();
-                const senha = document.getElementById("ec-password").value.trim();
-                const cidade = document.getElementById("ec-city").value.trim();
+                const nome = document.getElementById("fullname").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const senha = document.getElementById("password").value.trim();
+                const cidade = document.getElementById("city").value.trim();
 
                 if (!nome || !email || !senha || !cidade) {
                     alert("Preencha todos os campos.");
