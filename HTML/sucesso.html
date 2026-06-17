@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport: garante escala correta em mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compra Realizada</title>
+
+    <link rel="stylesheet" href="../sucesso.css">
+</head>
+<body>
+
+    <!--
+    =====================================================
+      CONTAINER PRINCIPAL
+      .mobile-screen centraliza o conteúdo como um
+      "card de app" em telas de PC (max-width: 430px).
+      No mobile ocupa 100% da tela.
+    ===================================================== -->
+    <main class="mobile-screen">
+
+        <!-- ==========================================
+             CABEÇALHO
+             Linha do topo: logo + botão voltar + texto
+             Abaixo: endereço pequeno + divisória
+        =========================================== -->
+        <header>
+
+            <div class="top-row">
+
+                <!-- Logo circular da loja/app -->
+                <img id="logo" src="../img/logo.png" alt="">
+
+                <!-- Agrupa o botão ← e o texto de navegação -->
+                <div class="back-wrapper">
+
+                    <img id="seta" src="../img/seta.png" alt="">
+
+                    <span class="back-text">
+                        Voltar para a forma de Pagamento
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Endereço exibido abaixo da linha do topo -->
+            <div class="address-top">
+                Rua dos palmares, 789
+            </div>
+
+            <!-- Linha separadora decorativa -->
+            <div class="divider"></div>
+
+        </header>
+
+        <!-- ==========================================
+             CARD DE SUCESSO
+             Caixa cinza com o título de confirmação.
+        =========================================== -->
+        <section class="success-card">
+
+            <h1>
+                Compra Realizada com Sucesso!
+            </h1>
+
+        </section>
+
+        <!-- ==========================================
+             ÁREA DE CONFETES
+             O <canvas> é preenchido pelo JavaScript
+             abaixo com partículas animadas de confete.
+             Substitui a imagem estática confete.png.
+        =========================================== -->
+        <section class="success-image">
+
+            <canvas id="confetti-canvas"></canvas>
+
+        </section>
+
+        <!-- ==========================================
+             BOTÃO DE AÇÃO
+             Leva o usuário de volta à tela principal.
+        =========================================== -->
+        <section class="action-area">
+
+            <button class="home-button">
+
+                <span>Voltar a tela principal</span>
+
+                <!-- Caixinha azul com a seta → -->
+                <span class="arrow-box">→</span>
+
+            </button>
+
+        </section>
+
+        <!-- ==========================================
+             RODAPÉ
+             Ícone de pin SVG + endereço da loja.
+        =========================================== -->
+        <footer>
+
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
