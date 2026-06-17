@@ -25,16 +25,6 @@ header{
     height: auto;
 }
  
-.header-icons{
-    display: flex;
-    gap: 20px;
-}
- 
-.header-icons a{
-    text-decoration: none;
-    color: white;
-    font-size: 28px;
-}
 /* ===== EFEITO VIDRO ===== */
 
 .efeito-vidro{
@@ -102,6 +92,26 @@ header{
 
 .pesquisar button:hover{
     opacity: 0.8;
+}
+
+.icons-topo{
+    display: flex;
+    gap: 25px;
+}
+
+.icons-topo a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 22px;
 }
 
 .card{
