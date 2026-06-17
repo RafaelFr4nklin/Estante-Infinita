@@ -1,227 +1,254 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.create-account-page {
+body{
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    background: linear-gradient(
-        180deg,
-        #03254d 0%,
-        #3d89ae 100%
-    );
-}
+    color: white;
+    background: linear-gradient(to bottom, #012A4A, #2C7DA0, #012A4A);
 
-.create-account-container {
-    width: 100%;
-    max-width: 450px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.create-account-back-btn {
-    position: fixed;
-    top: 25px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    transition: 0.3s;
-}
+/* HEADER */
 
-.create-account-back-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
+header{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 35px 10px;
 
-.create-account-avatar {
-    width: 150px;
-    height: 150px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 75px;
+}
+
+.voltar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    display: flex;
     justify-content: center;
-    border-radius: 50%;
-    background: #e8e8e8;
-    border: 4px solid #0c4f7a;
-    margin-bottom: 35px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.create-account-avatar svg {
-    width: 70px;
-    height: 70px;
-    color: #242424;
+header h1{
+    font-size: 22px;
 }
 
-.create-account-form {
+/* ENDEREÇO */
+
+.endereco{
     width: 100%;
-}
+    max-width: 900px;
+    margin: 5px auto 0;
+    padding: 0 35px;
 
-.create-account-field {
-    margin-bottom: 22px;
-}
-
-.create-account-field label {
-    display: block;
-    margin-bottom: 8px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.create-account-field input {
-    width: 100%;
-    padding: 18px 20px;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    color: #ffffff;
-    font-size: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.create-account-field input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.create-account-field input:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.create-account-checkbox-group {
-    margin-bottom: 18px;
-}
-
-.create-account-checkbox {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 1.5;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    font-weight: bold;
 }
 
-.create-account-checkbox input {
-    width: 18px;
-    height: 18px;
-    margin-top: 2px;
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-.create-account-submit {
+.linha{
     width: 100%;
-    margin-top: 25px;
-    padding: 18px;
+    max-width: 840px;
+    height: 4px;
+    margin: 10px auto 35px;
+
     border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
-}
-
-.create-account-submit:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.25);
-}
-
-.create-account-submit:active {
-    transform: translateY(0);
-}
-
-.success-message {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #28a745;
-    color: #ffffff;
-    padding: 15px 25px;
     border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s;
-    z-index: 9999;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    background: rgba(255,255,255,0.35);
 }
 
-.success-message.show {
-    opacity: 1;
-    visibility: visible;
+/* CONTEÚDO */
+
+main{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    flex: 1;
+
+    padding: 0 35px;
+
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 768px) {
+.aviso-carrinho{
+    width: 100%;
+    height: 45px;
 
-    .create-account-container {
-        max-width: 380px;
-    }
+    border-radius: 8px;
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.25);
 
-    .create-account-avatar {
-        width: 130px;
-        height: 130px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
 }
 
-@media (max-width: 480px) {
+.adicionar{
+    width: 100%;
+    max-width: 430px;
+    height: 45px;
 
-    .create-account-page {
-        padding: 20px;
+    margin: auto auto 28px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #8d8167;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.35);
+}
+
+.adicionar i{
+    font-size: 20px;
+}
+
+/* RESUMO */
+
+.resumo{
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+
+    padding: 25px;
+
+    background: #012A4A;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.frete,
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frete{
+    font-size: 11px;
+}
+
+.total h2{
+    font-size: 22px;
+}
+
+.comprar{
+    width: 100%;
+    height: 55px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 28px;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+}
+
+/* CELULAR */
+
+@media(max-width: 768px){
+    header{
+        padding: 18px 20px 8px;
     }
 
-    .create-account-container {
-        max-width: 100%;
+    #logo{
+        width: 65px;
     }
 
-    .create-account-avatar {
-        width: 120px;
-        height: 120px;
+    .voltar{
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    header h1{
+        font-size: 18px;
+    }
+
+    .endereco{
+        padding: 0 20px;
+        font-size: 8px;
+    }
+
+    .linha{
+        width: calc(100% - 40px);
         margin-bottom: 25px;
     }
 
-    .create-account-avatar svg {
-        width: 60px;
-        height: 60px;
+    main{
+        padding: 0 20px;
     }
 
-    .create-account-field input {
-        padding: 16px;
+    .aviso-carrinho{
+        height: 36px;
+        font-size: 16px;
     }
 
-    .create-account-submit {
-        font-size: 1.1rem;
-        padding: 16px;
+    .adicionar{
+        max-width: 100%;
+        height: 40px;
+        margin-bottom: 25px;
+
+        font-size: 16px;
+        gap: 35px;
     }
 
-    .create-account-checkbox {
-        font-size: 13px;
+    .resumo{
+        max-width: 100%;
+        padding: 20px;
     }
 
-    .success-message {
-        width: calc(100% - 40px);
-        text-align: center;
+    .total h2{
+        font-size: 18px;
+    }
+
+    .comprar{
+        height: 45px;
+        font-size: 24px;
     }
 }

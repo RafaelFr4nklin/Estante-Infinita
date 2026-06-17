@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - Estante Infinita</title>
-    <link rel="stylesheet" href="css/carrinho.css">
+    <title>Carrinho - Estante Infinita</title>
+    <link rel="stylesheet" href="CSS/carrinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <!--======|CABEÇALHO DO SITE|======-->
-        <button name="voltar" href="index.html"> Voltar</button>
-        <br>
-        <img id="logo" src="img/logo.png" alt="">
-        <br>
-        <h2>Carrinho</h2>
 
-    </header>
-    <main>
+<header>
+    <img src="img/logo.png" alt="Logo Estante Infinita" id="logo">
 
-        <form id="formCarrinho"> 
+    <a href="index.html" class="voltar">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
 
-            <section>
-                <br><br>
-                <text>Não há itens no carrinho</text>
-                <br><br>
-            </section>
+    <h1>Carrinho</h1>
+</header>
 
-        </form>
-        <button class="texto-botao">Adicionar mais itens</button>
-        <img id="mais" src="img/add.png" alt="">
-    </main>
-    <footer>
-        <br>
-        <text>Frete</text>
-        <br><br>
-        <text>Total</text>
-        <br><br>
-        <button class="texto-botao">Comprar</button>
-    </footer>
+<div class="endereco">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Rua dos palmares, 789</p>
+</div>
+
+<hr class="linha">
+
+<main>
+    <div class="aviso-carrinho">
+        Não há itens no carrinho
+    </div>
+
+    <button class="adicionar">
+        Adicionar mais itens
+        <i class="fa-regular fa-square-plus"></i>
+    </button>
+</main>
+
+<section class="resumo">
+    <div class="frete">
+        <strong>Frete</strong>
+        <strong>R$ 00.00</strong>
+    </div>
+
+    <div class="total">
+        <h2>Total</h2>
+        <h2>R$ 00.00</h2>
+    </div>
+
+    <button class="comprar">Comprar</button>
+</section>
+
 </body>
 </html>
