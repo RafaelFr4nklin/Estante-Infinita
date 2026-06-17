@@ -114,29 +114,42 @@ header{
     font-size: 22px;
 }
 
+/* ===== imagens das cartas ===== */
+
 .card{
     width: 250px;
     border: 3px solid #ffab66;
     border-radius: 30px;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .cartas{
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .cartas img{
-    width: 80%;
-    height: auto;
+    width: 90%;
+    height: 320px;
+    object-fit: cover;
     display: block;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
 .card-info{
     padding: 15px;
     background-color: #012A4A;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .card-info h4{
@@ -145,6 +158,7 @@ header{
 
 .estrelas{
     color: gold;
+    margin-top: auto;
     margin-bottom: 10px;
 }
 
@@ -152,6 +166,16 @@ header{
     font-size: 18px;
     font-weight: bold;
 }
+
+/* ===== DIVISORIAS ===== */
+
+.divisor{
+    width: 6.7px;
+    height: 280px;
+    background: rgba(255,255,255,0.025);
+    align-self: center;
+}
+
 /* ===== LINHAS ===== */
  
 .linha{
