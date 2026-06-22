@@ -145,6 +145,16 @@ body {
     transition: .3s;
 }
 
+.criar-link {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: inherit;
+    text-decoration: underline;
+    padding: 0;
+}
+
 .criacao-conta-submit:hover {
     transform: translateY(-2px);
     background: rgba(255,255,255,0.25);
