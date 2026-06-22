@@ -1,241 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estante Infinita</title>
+
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <img src="../img/logo.png" alt="Logo Estante Infinita" id="logo">
+<header>
+    <img src="../img/logo.png" alt="Logo Estante Infinita" id="logo">
 
-        <div class="icons-topo">
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    <div class="icons-topo">
+        <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+</header>
+
+<div class="pesquisa-tudo">
+    <form class="pesquisar">
+        <input type="text" placeholder="Pesquisar...">
+        <div></div>
+        <button class="efeito-vidro" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+</div>
+
+<hr class="linha">
+
+<h2 class="titulo-secao">Cartas</h2>
+
+<div class="produtos">
+
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="bulbasaur">
+        <div class="cartas">
+            <img src="../img2/Bulbasaur.jfif" alt="Bulbasaur">
         </div>
-
-    </header>
-
-    <!-- BARRA DE PESQUISA -->
-    <div class="pesquisa-tudo">
-        <form class="pesquisar">
-            <input type="text" placeholder="Pesquisar...">
-            <div></div>
-
-            <button class="efeito-vidro" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        <div class="card-info">
+            <h4>Bulbasaur BASIC</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 25,00</span>
+        </div>
     </div>
 
-    <hr class="linha">
+    <div class="divisor"></div>
 
-    <!-- SEÇÃO CARTAS -->
-    <h2 class="titulo-secao">Cartas</h2>
-
-    <div class="produtos">
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/Bulbasaur.jfif" alt="Bulbasaur">
-            </div>
-
-            <div class="card-info">
-                <h4>Bulbasaur BASIC</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
+    <div class="card" data-produto="jirachi">
+        <div class="cartas">
+            <img src="../img2/Jirachi.jpg" alt="Jirachi">
         </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/Jirachi.jpg" alt="Jirachi">
-            </div>
-
-            <div class="card-info">
-                <h4>Jirachi BASIC</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 34,50</span>
-            </div>
+        <div class="card-info">
+            <h4>Jirachi BASIC</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 34,50</span>
         </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <a href="compra.html">
-                <div class="cartas">
-                    <img src="../img2/Meowth.png" alt="Meowth EX">
-                </div>
-            </a>
-
-
-            <div class="card-info">
-                <h4>Meowth EX</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 91,00</span>
-            </div>
-        </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/Charmander.png" alt="Charmander">
-            </div>
-
-            <div class="card-info">
-                <h4>Charmander BASIC</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 21,50</span>
-            </div>
-        </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/Zygarde.png" alt="Zygarde EX">
-            </div>
-
-            <div class="card-info">
-                <h4>Zygarde EX</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
-        </div>
-        <div class="divisor"></div>
     </div>
 
-    <hr class="linha">
+    <div class="divisor"></div>
 
-    <!-- SEÇÃO QUADRINHOS -->
-    <h2 class="titulo-secao">Quadrinhos</h2>
-
-    <div class="produtos">
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/quadrinhodarth.jfif" alt="HQ Star Wars">
-            </div>
-
-            <div class="card-info">
-                <h4>HQ Star Wars</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
+    <div class="card" data-produto="meowth">
+        <div class="cartas">
+            <img src="../img2/Meowth.png" alt="Meowth EX">
         </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/MangaNaruto.jpg" alt="Mangá Naruto">
-            </div>
-
-            <div class="card-info">
-                <h4>Mangá Naruto</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
+        <div class="card-info">
+            <h4>Meowth EX</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 91,00</span>
         </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/hqmarvel.jfif" alt="HQ Marvel">
-            </div>
-
-            <div class="card-info">
-                <h4>HQ Marvel</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
-        </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/AgathaChristie.jpg" alt="Agatha Christie">
-            </div>
-
-            <div class="card-info">
-                <h4>Agatha Christie</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
-        </div>
-        <div class="divisor"></div>
-        <div class="card">
-            <div class="cartas">
-                <img src="../img2/HomemAranha.jfif" alt="HQ Homem-Aranha">
-            </div>
-
-            <div class="card-info">
-                <h4>HQ Homem-Aranha</h4>
-
-                <div class="estrelas">
-                    ★★★★★
-                </div>
-
-                <span class="preco">R$ 00,00</span>
-            </div>
-        </div>
-        <div class="divisor"></div>
     </div>
 
-    <!-- RODAPÉ -->
-    <footer>
+    <div class="divisor"></div>
 
-        <img src="../img/logo.png" alt="Logo Estante Infinita" width="150">
-
-        <nav class="footer-menu">
-            <ul>
-                <li><a href="#">* Minha Conta</a></li>
-                <li><a href="#">* Meu Carrinho</a></li>
-                <li><a href="#">* Início</a></li>
-                <li><a href="#">* Cartas</a></li>
-                <li><a href="#">* Quadrinhos</a></li>
-            </ul>
-        </nav>
-
-        <div class="redes">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <div class="card" data-produto="charmander">
+        <div class="cartas">
+            <img src="../img2/Charmander.png" alt="Charmander">
         </div>
+        <div class="card-info">
+            <h4>Charmander BASIC</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 21,50</span>
+        </div>
+    </div>
 
-    </footer>
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="zygarde">
+        <div class="cartas">
+            <img src="../img2/Zygarde.png" alt="Zygarde EX">
+        </div>
+        <div class="card-info">
+            <h4>Zygarde EX</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 79,90</span>
+        </div>
+    </div>
+
+    <div class="divisor"></div>
+
+</div>
+
+<hr class="linha">
+
+<h2 class="titulo-secao">Quadrinhos</h2>
+
+<div class="produtos">
+
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="starwars">
+        <div class="cartas">
+            <img src="../img2/quadrinhodarth.jfif" alt="HQ Star Wars">
+        </div>
+        <div class="card-info">
+            <h4>HQ Star Wars</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 49,90</span>
+        </div>
+    </div>
+
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="naruto">
+        <div class="cartas">
+            <img src="../img2/MangaNaruto.jpg" alt="Mangá Naruto">
+        </div>
+        <div class="card-info">
+            <h4>Mangá Naruto</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 39,90</span>
+        </div>
+    </div>
+
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="marvel">
+        <div class="cartas">
+            <img src="../img2/hqmarvel.jfif" alt="HQ Marvel">
+        </div>
+        <div class="card-info">
+            <h4>HQ Marvel</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 44,90</span>
+        </div>
+    </div>
+
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="agatha">
+        <div class="cartas">
+            <img src="../img2/AgathaChristie.jpg" alt="Agatha Christie">
+        </div>
+        <div class="card-info">
+            <h4>Agatha Christie</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 29,90</span>
+        </div>
+    </div>
+
+    <div class="divisor"></div>
+
+    <div class="card" data-produto="homemaranha">
+        <div class="cartas">
+            <img src="../img2/HomemAranha.jfif" alt="HQ Homem-Aranha">
+        </div>
+        <div class="card-info">
+            <h4>HQ Homem-Aranha</h4>
+            <div class="estrelas">★★★★★</div>
+            <span class="preco">R$ 42,90</span>
+        </div>
+    </div>
+
+    <div class="divisor"></div>
+
+</div>
+
+<footer>
+    <img src="../img/logo.png" alt="Logo Estante Infinita" width="150">
+
+    <nav class="footer-menu">
+        <ul>
+            <li><a href="#">* Minha Conta</a></li>
+            <li><a href="#">* Meu Carrinho</a></li>
+            <li><a href="#">* Início</a></li>
+            <li><a href="#">* Cartas</a></li>
+            <li><a href="#">* Quadrinhos</a></li>
+        </ul>
+    </nav>
+
+    <div class="redes">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+</footer>
+
+<script src="../JS/index.js"></script>
 
 </body>
-
 </html>
