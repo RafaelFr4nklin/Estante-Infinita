@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Estante Infinita</title>
+    <link rel="stylesheet" href="../CSS/tela_entrar.css">
+</head>
+
+<body>
+
+    <div class="criacao-conta-page">
+
+        <!-- Botão voltar -->
+        <button class="criacao-conta-back-btn" onclick="history.back()">
+           <img id="seta" src="../img/setabranca.png" alt="">
+        </button>
+
+        <div class="criacao-container">
+
+            <!-- Logo -->
+            <div class="avatar">
+                <img id="logo" src="../img/logo.png" alt="">
+            </div>
+
+            <!-- Formulário -->
+            <form id="formCadastro" class="criacao-conta-form">
+
+                <div class="estilo-vidro">
+                    <label for="nome">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        required
+                        minlength="3">
+                </div>
+
+                <div class="estilo-vidro">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        pattern=".+@gmail.com"
+                        required>
+                </div>
+
+                <button
+                    class="criacao-conta-submit"
+                    id="enviar"
+                    type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <br><br>
+
+            <h3 style="color:white;">ou</h3>
+
+            <br>
+
+            <form id="formRedesSociais" class="criacao-conta-form">
+
+                <button
+                    type="button"
+                    class="criacao-conta-submit"
+                    onclick="history.back()">
+                    Continuar pelo Google
+                </button>
+
+                <br><br>
+
+                <button
+                    type="button"
+                    class="criacao-conta-submit"
+                    onclick="history.back()">
+                    Continuar pelo Facebook
+                </button>
+
+            </form>
+
+            <br>
+
+            <footer style="color:white;">
+                Já é cadastrado?
+                <button
+                    type="button"
+                    class="texto-botao"
+                    onclick="history.back()">
+                    Crie
+                </button>
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
