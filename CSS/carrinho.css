@@ -8,7 +8,7 @@
 body{
     min-height: 100vh;
     color: white;
-    background: linear-gradient(to bottom, #012A4A, #2C7DA0, #012A4A);
+    background: linear-gradient(to bottom, #012A4A 10%, #2C7DA0 50%, #012A4A );
 
     display: flex;
     flex-direction: column;
@@ -16,22 +16,27 @@ body{
 
 /* HEADER */
 
-header{
+header {
     width: 100%;
-    max-width: 900px;
     margin: 0 auto;
     padding: 25px 35px 10px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-#logo{
+#logo {
     width: 75px;
 }
 
-.voltar{
+.posicao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto; /* ← empurra o botão e o h1 para a direita */
+}
+
+.voltar {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -47,10 +52,9 @@ header{
     font-size: 20px;
 }
 
-header h1{
+header h1 {
     font-size: 22px;
 }
-
 /* ENDEREÇO */
 
 .endereco{
@@ -68,8 +72,7 @@ header h1{
 }
 
 .linha{
-    width: 100%;
-    max-width: 840px;
+    width: 95%;
     height: 4px;
     margin: 10px auto 35px;
 
@@ -147,8 +150,12 @@ main{
     margin: 0 auto;
 
     padding: 25px;
+    
+    
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
-    background: #012A4A;
+    
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 
@@ -179,7 +186,8 @@ main{
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 28px;
 
-    background: rgba(255,255,255,0.15);
+    background:  rgba(255,255,255,0.15);
+
     color: white;
 
     font-size: 28px;
@@ -187,6 +195,75 @@ main{
 
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+}
+/* ===== FOOTER ===== */
+ 
+footer{
+    margin-top: 40px;
+    padding: 20px 40px;
+    border-radius: 0 0 20px 20px;
+    gap: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.footer-menu{
+    flex: 2;
+    margin: 0 50px;
+}
+
+.footer-menu ul{
+
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+ 
+.footer-menu li{
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding: 4px 0;
+    width: 100%;
+}
+ 
+.footer-menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    display: block;
+    font-size: 18px;
+}
+ 
+.footer-menu a:hover{
+    color: #89C2D9;
+}
+
+.redes{
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    gap: 20px;
+    padding: 20px 25px;
+    border-radius: 20px;
+}
+ 
+.redes a{
+    width: 75px;
+    height: 75px;
+ 
+    background: white;
+    color: #012A4A;
+ 
+    border-radius: 70%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    text-decoration: none;
+    font-size: 30px;
 }
 
 /* CELULAR */

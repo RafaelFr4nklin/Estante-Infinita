@@ -11,13 +11,15 @@
 <body>
 
 <header>
-    <img src="img/logo.png" alt="Logo Estante Infinita" id="logo">
-
-    <a href="index.html" class="voltar">
+    <img src="../img/logo.png" alt="Logo Estante Infinita" id="logo">
+    <div class="posicao">
+    <a href="../HTML/index.html" class="voltar">
         <i class="fa-solid fa-arrow-left"></i>
     </a>
-
     <h1>Carrinho</h1>
+    </div>
+
+    
 </header>
 
 <div class="endereco">
@@ -28,7 +30,7 @@
 <hr class="linha">
 
 <main>
-    <div class="aviso-carrinho">
+    <div class="aviso-carrinho" id="aviso-carrinho-vazio">
         Não há itens no carrinho
     </div>
 
@@ -52,5 +54,27 @@
     <button class="comprar">Comprar</button>
 </section>
 
+<!-- RODAPÉ -->
+    <footer>
+
+        <img src="../img/logo.png" alt="Logo Estante Infinita" width="150">
+
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="#">* Minha Conta</a></li>
+                <li><a href="#">* Meu Carrinho</a></li>
+                <li><a href="../HTML/index.html">* Início</a></li>
+                <li><a href="#">* Cartas</a></li>
+                <li><a href="#">* Quadrinhos</a></li>
+            </ul>
+        </nav>
+
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+
+    </footer>
 </body>
 </html>
