@@ -96,10 +96,183 @@
             Inicie uma conversa sobre suas coleções!
         </p>
 
-        <button>Conversar sobre coleções</button>
+        <button onclick="abrirChat()"> Conversar sobre coleções </button>
     </section>
 
 </div>
+
+<!-- CHAT PEDRINHO -->
+
+<div id="chatPanel" class="chat-panel">
+
+    <div class="chat-header">
+
+        <div class="chat-usuario">
+
+            <img src="../img/icon.png" alt="Betinha">
+
+            <div>
+                <strong>Betinha</strong>
+                <p>Colecionadora</p>
+            </div>
+
+        </div>
+
+        <button class="btn-fechar" onclick="fecharChat()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="interesses-chat">
+
+        <span>Pokémon TCG</span>
+        <span>Marvel</span>
+        <span>Mangás Shonen</span>
+        <span>DC Comics</span>
+
+    </div>
+
+    <div class="chat-mensagens" id="chatMensagens">
+
+        <!-- BETINHA -->
+
+        <div class="mensagem vendedor">
+            Olá, Pedrinho! Vi que temos interesses em comum e gostaria de conhecer sua coleção 😊
+        </div>
+
+        <!-- PEDRINHO -->
+
+        <div class="mensagem usuario">
+            Oi Betinha! Que legal. Tenho vários cards de Pokémon TCG disponíveis.
+        </div>
+
+        <!-- BETINHA -->
+
+        <div class="mensagem vendedor">
+            Estou procurando cartas de Umbreon.
+        </div>
+
+        <!-- PEDRINHO -->
+
+        <div class="mensagem usuario">
+            Tenho algumas opções que podem te interessar.
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="mensagemInput"
+            placeholder="Responder para Betinha..."
+        >
+
+        <button onclick="enviarMensagem()">
+            Enviar
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirChat(){
+
+    document
+        .getElementById("chatPanel")
+        .classList.add("ativo");
+}
+
+function fecharChat(){
+
+    document
+        .getElementById("chatPanel")
+        .classList.remove("ativo");
+}
+
+function enviarMensagem(){
+
+    const input =
+        document.getElementById("mensagemInput");
+
+    const texto =
+        input.value.trim();
+
+    if(texto === "") return;
+
+    const area =
+        document.getElementById("chatMensagens");
+
+    /* MENSAGEM DO PEDRINHO */
+
+    const msg =
+        document.createElement("div");
+
+    msg.classList.add(
+        "mensagem",
+        "usuario"
+    );
+
+    msg.textContent = texto;
+
+    area.appendChild(msg);
+
+    input.value = "";
+
+    area.scrollTop =
+        area.scrollHeight;
+
+    /* RESPOSTA DA BETINHA */
+
+    const respostas = [
+
+        "Obrigada pelo retorno 😊",
+
+        "Gostei bastante dos cards que você mostrou.",
+
+        "Você possui outras cartas de Pokémon?",
+
+        "Achei seu perfil através das recomendações.",
+
+        "Tenho interesse em algumas cartas raras.",
+
+        "Podemos continuar conversando sobre a coleção.",
+
+        "Gostei muito do Umbreon que você comentou.",
+
+        "Você teria mais fotos da coleção?"
+    ];
+
+    setTimeout(() => {
+
+        const resposta =
+            document.createElement("div");
+
+        resposta.classList.add(
+            "mensagem",
+            "vendedor"
+        );
+
+        resposta.textContent =
+            respostas[
+                Math.floor(
+                    Math.random() *
+                    respostas.length
+                )
+            ];
+
+        area.appendChild(resposta);
+
+        area.scrollTop =
+            area.scrollHeight;
+
+    }, 1000);
+}
+
+</script>
 
 </body>
 </html>

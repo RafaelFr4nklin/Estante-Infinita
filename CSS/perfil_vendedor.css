@@ -114,3 +114,181 @@ button{
     border-radius:8px;
     cursor:pointer;
 }
+
+/* ========================= */
+/* CHAT PEDRINHO */
+/* ========================= */
+
+.chat-panel{
+
+    position: fixed;
+
+    top: 0;
+    right: -420px;
+
+    width: 400px;
+    max-width: 100%;
+
+    height: 100vh;
+
+    background: #0d3552;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.4s;
+
+    z-index: 999;
+}
+
+.chat-panel.ativo{
+    right: 0;
+}
+
+.chat-header{
+
+    background: white;
+    color: black;
+
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-usuario{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-usuario img{
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+}
+
+.btn-fechar{
+
+    width: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: black;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.interesses-chat{
+
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.interesses-chat span{
+
+    background: #d7fff1;
+
+    color: #2f7aa5;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+.chat-mensagens{
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.mensagem{
+
+    max-width: 75%;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+}
+
+/* PEDRINHO */
+
+.usuario{
+
+    align-self: flex-end;
+
+    background: #8fffe0;
+
+    color: #003049;
+}
+
+/* BETINHA */
+
+.vendedor{
+
+    align-self: flex-start;
+
+    background: white;
+
+    color: black;
+}
+
+.chat-input{
+
+    padding: 15px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.chat-input input{
+
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+}
+
+.chat-input button{
+
+    width: auto;
+}
+
+@media(max-width:768px){
+
+    .chat-panel{
+
+        width:100%;
+
+        right:-100%;
+    }
+
+}
