@@ -75,10 +75,150 @@
                 Inicie uma conversa sobre suas coleções!
             </p>
 
-            <button>Conversar sobre coleções</button>
+                <button onclick="abrirChat()"> Conversar sobre coleções </button>
         </section>
 
     </div>
+<!-- CHAT -->
+<div id="chatPanel" class="chat-panel">
+
+    <div class="chat-header">
+
+        <div class="chat-usuario">
+            <img src="../img/icon.png" alt="Pedrinho">
+
+            <div>
+                <strong>Pedrinho</strong>
+                <p>Vendedor recomendado</p>
+            </div>
+        </div>
+
+        <button class="btn-fechar" onclick="fecharChat()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="interesses-chat">
+        <span>Pokémon TCG</span>
+        <span>Marvel</span>
+        <span>Mangás Shonen</span>
+        <span>DC Comics</span>
+    </div>
+
+    <div class="chat-mensagens" id="chatMensagens">
+
+        <div class="mensagem usuario">
+            Olá, Pedrinho! Vi que temos interesses em comum e gostaria de conhecer sua coleção 😊
+        </div>
+
+        <div class="mensagem vendedor">
+            Oi Betinha! Que legal. Tenho vários cards de Pokémon TCG disponíveis.
+        </div>
+
+        <div class="mensagem usuario">
+            Estou procurando cartas de Umbreon.
+        </div>
+
+        <div class="mensagem vendedor">
+            Tenho algumas opções que podem te interessar.
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="mensagemInput"
+            placeholder="Digite uma mensagem..."
+        >
+
+        <button onclick="enviarMensagem()">
+            Enviar
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirChat() {
+    document
+        .getElementById("chatPanel")
+        .classList.add("ativo");
+}
+
+function fecharChat() {
+    document
+        .getElementById("chatPanel")
+        .classList.remove("ativo");
+}
+
+function enviarMensagem() {
+
+    const input =
+        document.getElementById("mensagemInput");
+
+    const texto =
+        input.value.trim();
+
+    if(texto === "") return;
+
+    const area =
+        document.getElementById("chatMensagens");
+
+    const msg =
+        document.createElement("div");
+
+    msg.classList.add(
+        "mensagem",
+        "usuario"
+    );
+
+    msg.textContent = texto;
+
+    area.appendChild(msg);
+
+    input.value = "";
+
+    area.scrollTop = area.scrollHeight;
+
+    const respostas = [
+        "Que legal! 😊",
+        "Também gosto muito dessa coleção.",
+        "Posso te mostrar alguns cards.",
+        "Tenho algumas cartas raras disponíveis.",
+        "Talvez você goste dos meus cards de Umbreon.",
+        "Temos vários interesses em comum."
+    ];
+
+    setTimeout(() => {
+
+        const resposta =
+            document.createElement("div");
+
+        resposta.classList.add(
+            "mensagem",
+            "vendedor"
+        );
+
+        resposta.textContent =
+            respostas[
+                Math.floor(
+                    Math.random() * respostas.length
+                )
+            ];
+
+        area.appendChild(resposta);
+
+        area.scrollTop = area.scrollHeight;
+
+    }, 1000);
+}
+
+</script>
 
 </body>
 </html>
