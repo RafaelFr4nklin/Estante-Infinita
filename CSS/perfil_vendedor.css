@@ -78,6 +78,8 @@ header{
     color:black;
     border-radius:5px;
     overflow:hidden;
+    width: 200px;
+    height: 200px;
 }
 
 .card img{
