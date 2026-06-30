@@ -13,9 +13,9 @@ document.querySelectorAll(".card[data-produto]").forEach(card => {
         ];
 
         if (quadrinhos.includes(produto)) {
-            window.location.href = `compra2.html?produto=${produto}`;
+            window.location.href = `../HTML/compra2.html?produto=${produto}`;
         } else {
-            window.location.href = `compra.html?produto=${produto}`;
+            window.location.href = `../HTML/compra.html?produto=${produto}`;
         }
     });
 });
