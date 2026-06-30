@@ -85,14 +85,21 @@
             <footer style="color:white;">
                 <p>
                 Já é cadastrado?
-                <button class="criar-link">Crie</button>
+                <button class="criar-link" id="criar-conta">Crie</button>
                 </p>
             </footer>
 
         </div>
 
     </div>
+<script>
+document.getElementById("criar-conta").addEventListener("click", () => {
+    
 
+    window.location.href = "cadastro.html";
+});
+
+</script>
 </body>
 
 </html>
