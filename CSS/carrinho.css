@@ -329,3 +329,96 @@ footer{
         font-size: 24px;
     }
 }
+/* ITENS DO CARRINHO */
+
+.item-carrinho {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.item-carrinho img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.item-carrinho .nome-item {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.item-carrinho .preco-item {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.item-carrinho .remover-item {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* LINHA DE CÁLCULO */
+
+.calculo-resumo {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    min-height: 20px;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+/* CONTROLE DE QUANTIDADE */
+
+.qty-controle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+.qty-btn {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.qty-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.qty-valor {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}

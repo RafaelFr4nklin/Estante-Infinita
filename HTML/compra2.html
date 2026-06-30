@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quadrinho - Estante Infinita</title>
 
-    <link rel="stylesheet" href="../CSS/compra2.css">
+    <link rel="stylesheet" href="../CSS/compra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -20,7 +20,7 @@
     </div>
 
     <div class="icons-topo">
-        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i></a>
         <a href="#"><i class="fa-regular fa-user"></i></a>
         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
@@ -50,10 +50,7 @@
     </div>
 
     <div class="acoes-produto">
-        <a href="tela_carrinho.html">
-            <button>Adicionar ao carrinho</button>
-        </a>
-
+        <button id="btn-carrinho">Adicionar ao carrinho</button>
         <button>Fazer oferta</button>
 
         <div class="local">
@@ -118,13 +115,13 @@
     <img src="../img/logo.png" class="logo-footer">
 
     <nav class="footer-menu">
-        <ul>
-            <li><a href="#">Minha conta</a></li>
-            <li><a href="#">Meu Carrinho</a></li>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#">Cartas</a></li>
-            <li><a href="#">Quadrinhos</a></li>
-        </ul>
+           <ul>
+                <li><a href="perfil_usuario.html">* Minha Conta</a></li>
+                <li><a href="carrinho.html">* Meu Carrinho</a></li>
+                <li><a href="index.html">* Início</a></li>
+                <li><a href="compra.html">* Cartas</a></li>
+                <li><a href="compra2.html">* Quadrinhos</a></li>
+            </ul>
     </nav>
 
     <div class="redes">
@@ -134,7 +131,7 @@
     </div>
 </footer>
 
-<script src="../JS/compra2.js"></script>
+<script src="../JS/compra.js"></script>
 
 </body>
 </html>
